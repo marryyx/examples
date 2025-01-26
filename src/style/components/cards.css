@@ -28,7 +28,7 @@
 
         content: '';
 
-        background-image: url(../../assets/Noise.png);
+        background-image: url(../../assets/image/noise.webp);
         background-position: center;
 
     }
@@ -42,7 +42,7 @@
 
         content: '';
 
-        background-image: url(../../assets/1-card.png);
+        background-image: url(../../assets/image/1-card.webp);
         background-position: center;
         background-size: cover;
     }
@@ -51,7 +51,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/2-card.png);
+            background-image: url(../../assets/image/2-card.webp);
         }
     }
 
@@ -95,7 +95,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/4-card.png);
+            background-image: url(../../assets/image/4-card.webp);
             background-position: center right;
             background-size: 320px;
             background-repeat: no-repeat;
@@ -107,7 +107,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/5-card.svg);
+            background-image: url(../../assets/image/5-card.svg);
         }
     }
 
@@ -116,7 +116,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/6-card.svg);
+            background-image: url(../../assets/image/6-card.svg);
         }
     }
 
@@ -125,7 +125,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/7-card.svg);
+            background-image: url(../../assets/image/7-card.svg);
         }
     }
 
@@ -134,14 +134,14 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/8-card.svg);
+            background-image: url(../../assets/image/8-card.svg);
         }
     }
 
     &.--9 {
         &::after {
             z-index: 1;
-            background-image: url(../../assets/9-card.svg);
+            background-image: url(../../assets/image/9-card.svg);
         }
     }
 
@@ -150,21 +150,21 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/10-card.svg);
+            background-image: url(../../assets/image/10-card.svg);
         }
     }
 
     &.--11 {
         &::after {
             z-index: 1;
-            background-image: url(../../assets/11-card.svg);
+            background-image: url(../../assets/image/11-card.svg);
         }
     }
 
     &.--11 {
         &::after {
             z-index: 1;
-            background-image: url(../../assets/11-card.svg);
+            background-image: url(../../assets/image/11-card.svg);
         }
     }
 
@@ -173,7 +173,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/12-card.svg);
+            background-image: url(../../assets/image/12-card.svg);
             scale: 1.7;
         }
     }
@@ -183,7 +183,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/13-card.svg);
+            background-image: url(../../assets/image/13-card.svg);
         }
     }
 
