@@ -1,31 +1,25 @@
-<div class="card">
+<div class="card --7">
     <div class="card__top">
         <include src="components/use-icon.html" locals='{
-            "className": "card__svg --small",
-            "iconName": "nfs" }'></include>
+            "className": "card__svg --chip",
+            "iconName": "chip" }'></include>
 
         <include src="components/use-icon.html" locals='{
-            "className": "card__svg",
-            "iconName": "visa" }'></include>
+                "className": "card__svg",
+                "iconName": "nfs" }'></include>
     </div>
 
     <div class="card__content">
         <div class="card__number">{{ NumberCard }}</div>
 
-        <div class="card__personal-info">
+        <div class="card__personal-info --design-2">
             <div class="card__data">
-                Card holder name
                 <span>{{ HolderName }}</span>
             </div>
 
             <div class="card__data">
-                Expiry date
                 <span>{{ Date }}</span>
             </div>
         </div>
     </div>
-
-    <include src="components/use-icon.html" locals='{
-        "className": "card__svg-bottom",
-        "iconName": "chip" }'></include>
 </div>
