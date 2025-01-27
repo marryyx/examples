@@ -11,37 +11,10 @@
 <body>
     <div class="container">
         <section class="cards">
-            <div class="card">
-                <div class="card__top">
-                    <include src="components/use-icon.html" locals='{
-                        "className": "card__svg --small",
-                        "iconName": "nfs" }'></include>
-
-                    <include src="components/use-icon.html" locals='{
-                        "className": "card__svg",
-                        "iconName": "visa" }'></include>
-                </div>
-
-                <div class="card__content">
-                    <div class="card__number">3455 4562 7712 3507</div>
-
-                    <div class="card__personal-info">
-                        <div class="card__data">
-                            Card holder name
-                            <span>John Carter</span>
-                        </div>
-
-                        <div class="card__data">
-                            Expiry date
-                            <span>02/30</span>
-                        </div>
-                    </div>
-                </div>
-
-                <include src="components/use-icon.html" locals='{
-                    "className": "card__svg-bottom",
-                    "iconName": "chip" }'></include>
-            </div>
+            <include src="components/card-1.html" locals='{
+                "cardNumber": "3455 4562 7712 3507",
+                "holderName: "John Carter",
+                "date": "02/30" }'></include>
 
             <div class="card --2">
                 <div class="card__top">

@@ -8,12 +8,7 @@
             "root": "src/html/includes"
         },
         "posthtml-expressions": {
-            "locals": {
-                "titlePage": "Autodesk Revit",
-                "headerBurger": true,
-                "headerLang": true,
-                "headerBasket": true
-            }
+
         }
     }
 }
