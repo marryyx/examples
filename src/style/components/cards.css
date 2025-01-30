@@ -10,6 +10,8 @@
     position: relative;
     flex: var(--card-flex, 0 0 calc(33.333% - 16px));
 
+    min-height: 268px;
+
     padding: 24px;
 
     border-radius: 20px;
@@ -143,6 +145,48 @@
         }
     }
 
+    &.--10 {
+        --card-bg: #3F5999;
+
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/10-card.svg);
+        }
+    }
+
+    &.--11 {
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/11-card.svg);
+        }
+    }
+
+    &.--11 {
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/11-card.svg);
+        }
+    }
+
+    &.--12 {
+        background: linear-gradient(#ED1C24 0%, #4F339A 100%);
+
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/12-card.svg);
+            scale: 1.7;
+        }
+    }
+
+    &.--13 {
+        background: linear-gradient(#ED1C24 0%, #FCEE21 100%);
+
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/13-card.svg);
+        }
+    }
+
     @media (max-width: 1230px) {
         --card-flex: 0 0 calc(50% - 24px);
     }
@@ -153,6 +197,9 @@
 }
 
 .card__top {
+    position: relative;
+    z-index: 10;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -161,8 +208,15 @@
 
     margin-bottom: 20%;
 
+    & span {
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+    }
+
     & .card__svg {
-        z-index: 3;
+        position: relative;
+        z-index: 5;
 
         width: 52px;
         height: 32px;
@@ -198,6 +252,10 @@
 
         cursor: pointer;
     }
+
+    &.--design-2 {
+        margin: auto auto 0 auto;
+    };
 }
 
 .card__personal-info {
@@ -224,7 +282,7 @@
     }
 }
 
-.card__chip {
+.card__svg-bottom {
     position: absolute;
     z-index: 3;
 
