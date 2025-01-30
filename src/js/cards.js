@@ -1,5 +1,9 @@
 const hosts = document.querySelectorAll('.card');
 
+const maskCardNumber = (item) => {
+    return hideNumOnTheCard = item.slice(0, -4).replace(/\d/g, "•") + item.slice(-4);
+};
+
 for (let j = 0; j < hosts.length; j++) {
     const bankCardNumbers = hosts[j].querySelectorAll('.card__number');
 
@@ -15,9 +19,8 @@ for (let j = 0; j < hosts.length; j++) {
                 item.dataset.hidden = "false";
 
             } else {
-                const hideNumOnTheCard = cardNum.slice(0, -4).replace(/\d/g, "•") + cardNum.slice(-4);
+                maskCardNumber(cardNum);
                 item.textContent = hideNumOnTheCard;
-                
                 item.dataset.hidden = "true";
             }
         });
