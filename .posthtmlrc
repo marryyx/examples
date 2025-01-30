@@ -8,7 +8,88 @@
             "root": "src/html/includes"
         },
         "posthtml-expressions": {
-            "locals": {}
+            "locals": {
+                "cardsArray": [
+                    {
+                        "type": "first",
+                        "number": "3455 4562 7712 3507",
+                        "holder": "John Carter",
+                        "expiry": "01/28"
+                    },
+                    {
+                        "type": "second",
+                        "number": "2345 6789 0123 4567",
+                        "holder": "Bob Smith",
+                        "expiry": "06/29"
+                    },
+                    {
+                        "type": "third",
+                        "number": "3456 7890 1234 5678",
+                        "holder": "Charlie Brown",
+                        "expiry": "12/27"
+                    },
+                    {
+                        "type": "fourth",
+                        "number": "4567 8901 2345 6789",
+                        "holder": "Diana Prince",
+                        "expiry": "09/26"
+                    },
+                    {
+                        "type": "fifth",
+                        "number": "5678 9012 3456 7890",
+                        "holder": "Edward Wilson",
+                        "expiry": "04/30"
+                    },
+                    {
+                        "type": "sixth",
+                        "number": "6789 0123 4567 8901",
+                        "holder": "Fiona Davis",
+                        "expiry": "07/28"
+                    },
+                    {
+                        "type": "seventh",
+                        "number": "7890 1234 5678 9012",
+                        "holder": "George Miller",
+                        "expiry": "03/27"
+                    },
+                    {
+                        "type": "eighth",
+                        "number": "8901 2345 6789 0123",
+                        "holder": "Hannah Lewis",
+                        "expiry": "08/29"
+                    },
+                    {
+                        "type": "ninth",
+                        "number": "9012 3456 7890 1234",
+                        "holder": "Ian Thompson",
+                        "expiry": "05/31"
+                    },
+                    {
+                        "type": "tenth",
+                        "number": "0123 4567 8901 2345",
+                        "holder": "Julia Roberts",
+                        "expiry": "11/28"
+                    },
+                    {
+                        "type": "eleventh",
+                        "number": "1234 5678 9012 3456",
+                        "holder": "Kevin White",
+                        "expiry": "02/29"
+                    },
+                    {
+                        "type": "twelfth",
+                        "number": "2345 6789 0123 4567",
+                        "holder": "Laura Green",
+                        "expiry": "10/30"
+                    },
+                    {
+                        "type": "thirteenth",
+                        "number": "3456 7890 1234 5678",
+                        "holder": "Michael Scott",
+                        "expiry": "12/32"
+                    }
+                ]
+            }
         }
     }
 }

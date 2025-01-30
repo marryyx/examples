@@ -11,70 +11,14 @@
 <body>
     <div class="container">
         <section class="cards">
-            <include src="components/card-1.html" locals='{
-                "NumberCard": "3455 4562 7712 3507",
-                "HolderName": "John Carter",
-                "Date": "02/30" }'></include>
-
-            <include src="components/card-2.html" locals='{
-                    "NumberCard": "3445 4562 7710 3507",
-                    "HolderName": "John Carter",
-                    "Date": "02/30" }'></include>
-
-            <include src="components/card-3.html" locals='{
-                        "NumberCard": "3555 4562 7710 3507",
-                        "HolderName": "John Carter",
-                        "Date": "02/30" }'></include>
-
-            <include src="components/card-4.html" locals='{
-                            "NumberCard": "3455 4566 7710 3507",
-                            "HolderName": "John Carter",
-                            "Date": "02/30" }'></include>
-
-            <include src="components/card-5.html" locals='{
-                                "NumberCard": "4562 7718 3507 0042",
-                                "HolderName": "Jane Warren",
-                                "Date": "08/29" }'></include>
-
-            <include src="components/card-6.html" locals='{
-                "NumberCard": "4562 7710 3507 1042",
-                "HolderName": "Jane Warren",
-                "Date": "08/29" }'></include>
-
-            <include src="components/card-7.html" locals='{
-                    "NumberCard": "3344 4562 7710 3557",
-                    "HolderName": "John Carter",
-                    "Date": "02/30" }'></include>
-
-            <include src="components/card-8.html" locals='{
-                        "NumberCard": "3455 4587 7710 3507",
-                        "HolderName": "John Carter",
-                        "Date": "02/30" }'></include>
-
-            <include src="components/card-9.html" locals='{
-                            "NumberCard": "3455 5642 7710 3507",
-                            "HolderName": "John Carter",
-                            "Date": "02/30" }'></include>
-
-            <include src="components/card-10.html" locals='{
-                                "NumberCard": "3455 4562 7712 3507",
-                                "HolderName": "John Carter",
-                                "Date": "02/30" }'></include>
-
-            <include src="components/card-11.html" locals='{
-                                    "NumberCard": "4562 7718 3507 0042",
-                                    "HolderName": "Jane Warren",
-                                    "Date": "08/29" }'></include>
-
-            <include src="components/card-12.html" locals='{
-                                        "NumberCard": "4562 7718 3507 0042",
-                                        "HolderName": "Jane Warren",
-                                        "Date": "08/29" }'></include>
-
-            <include src="components/card-13.html" locals='{
-                                            "NumberCard": "4562 7718 3507 0042",
-                                            "HolderName": "Jane Warren",
-                                            "Date": "08/29" }'></include>
+            <each loop="item in cardsArray">
+                <include src="components/cards/card.html" locals='{
+                    "type": "{{ item.type }}",
+                    "number": "{{ item.number }}",
+                    "holder": "{{ item.holder }}",
+                    "expiry": "{{ item.expiry }}"
+                }' />
+            </each>
         </section>
     </div>
 
