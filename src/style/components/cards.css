@@ -42,7 +42,7 @@
 
         content: '';
 
-        background-image: url(../../assets/image/1-card.webp);
+        background-image: url(../../assets/image/card-1.webp);
         background-position: center;
         background-size: cover;
     }
@@ -51,7 +51,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/2-card.webp);
+            background-image: url(../../assets/image/card-2.webp);
         }
     }
 
@@ -95,7 +95,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/4-card.webp);
+            background-image: url(../../assets/image/card-4.webp);
             background-position: center right;
             background-size: 320px;
             background-repeat: no-repeat;
@@ -107,7 +107,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/5-card.svg);
+            background-image: url(../../assets/image/card-5.svg);
         }
     }
 
@@ -116,7 +116,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/6-card.svg);
+            background-image: url(../../assets/image/card-6.svg);
         }
     }
 
@@ -125,7 +125,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/7-card.svg);
+            background-image: url(../../assets/image/card-7.svg);
         }
     }
 
@@ -134,14 +134,14 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/8-card.svg);
+            background-image: url(../../assets/image/card-8.svg);
         }
     }
 
     &.--9 {
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/9-card.svg);
+            background-image: url(../../assets/image/card-9.svg);
         }
     }
 
@@ -150,21 +150,14 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/10-card.svg);
+            background-image: url(../../assets/image/card-10.svg);
         }
     }
 
     &.--11 {
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/11-card.svg);
-        }
-    }
-
-    &.--11 {
-        &::after {
-            z-index: 1;
-            background-image: url(../../assets/image/11-card.svg);
+            background-image: url(../../assets/image/card-11.svg);
         }
     }
 
@@ -173,7 +166,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/12-card.svg);
+            background-image: url(../../assets/image/card-12.svg);
             scale: 1.7;
         }
     }
@@ -183,7 +176,7 @@
 
         &::after {
             z-index: 1;
-            background-image: url(../../assets/image/13-card.svg);
+            background-image: url(../../assets/image/card-13.svg);
         }
     }
 
