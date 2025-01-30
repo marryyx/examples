@@ -1,0 +1,23 @@
+{
+    "name": "marchik",
+    "description": "",
+    "version": "1.0.0",
+    "keyboards": [],
+    "author": "Marik",
+    "license": "",
+    "scripts": {
+        "start": "parcel src/html/pages/*.html",
+        "build": "parcel build src/html/pages/*.html"
+    },
+    "devDependencies": {
+        "@parcel/transformer-posthtml": "^2.13.3",
+        "autoprefixer": "^10.4.20",
+        "cssnano": "^7.0.6",
+        "parcel": "^2.13.3",
+        "parcel-resolver-ignore": "^2.2.0",
+        "postcss": "^8.4.49",
+        "posthtml-expressions": "^1.11.4",
+        "posthtml-include": "^2.0.1",
+        "posthtml-modules": "^0.9.1"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "plugins": {
+        "posthtml-include": {
+            "root": "src/html/includes",
+            "locals": {}
+        },
+        "posthtml-modules": {
+            "root": "src/html/includes"
+        },
+        "posthtml-expressions": {
+            "locals": {
+                "titlePage": "Autodesk Revit",
+                "headerBurger": true,
+                "headerLang": true,
+                "headerBasket": true
+            }
+        }
+    }
+}
