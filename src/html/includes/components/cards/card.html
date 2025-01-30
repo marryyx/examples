@@ -1,10 +1,25 @@
-<if condition="type === 'second'">
-    <include src="components/cards/_2.html"
+<if condition="type === 'first'">
+    <include src="components/cards/_1.html"
         locals='{ "NumberCard": "{{number}}", "HolderName": "{{holder}}", "Date": "{{expiry}}" }'></include>
 </if>
 
+<elseif condition="type === 'second'">
+    <include src="components/cards/_2.html"
+        locals='{ "NumberCard": "{{number}}", "HolderName": "{{holder}}", "Date": "{{expiry}}" }'></include>
+</elseif>
+
 <elseif condition="type === 'third'">
     <include src="components/cards/_3.html"
+        locals='{ "NumberCard": "{{number}}", "HolderName": "{{holder}}", "Date": "{{expiry}}" }'></include>
+</elseif>
+
+<elseif condition="type === 'fourth'">
+    <include src="components/cards/_4.html"
+        locals='{ "NumberCard": "{{number}}", "HolderName": "{{holder}}", "Date": "{{expiry}}" }'></include>
+</elseif>
+
+<elseif condition="type === 'fifth'">
+    <include src="components/cards/_5.html"
         locals='{ "NumberCard": "{{number}}", "HolderName": "{{holder}}", "Date": "{{expiry}}" }'></include>
 </elseif>
 
