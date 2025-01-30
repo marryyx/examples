@@ -1,0 +1,65 @@
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 24px;
+
+    min-width: 100%;
+}
+
+.card {
+    position: relative;
+
+    width: 33%;
+    padding: 24px;
+
+    border-radius: 20px;
+    background: #07051B;
+
+    overflow: hidden;
+
+    &::before {
+        position: absolute;
+        inset: 2;
+
+        min-width: 100%;
+        min-height: 100%;
+
+        content: '';
+
+        background-image: url(../../assets/Noise.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    &::after {
+        position: absolute;
+        inset: 1;
+
+        min-width: 100%;
+        min-height: 100%;
+
+        content: '';
+
+        background-image: url(../../assets/Noise.png);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20%;
+}
+
+.card__content {
+    color: white;
+
+    & .card__title {
+        font-size: 28px;
+        font-weight: 700;
+    }
+}
