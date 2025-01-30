@@ -12,24 +12,17 @@ html {
 }
 
 body {
-    display: flex;
-    align-items: center;
-
-    min-width: 100%;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     
     background: var(--color-light);
 }
 
-/* .container {
+.container {
     position: relative;
     
-    width: min(var(--container-size, 14400px), 100%);
+    width: min(var(--container-size, 1440px), 100%);
 
     margin: 0 auto;
     padding: 0 24px;
-
-    @media (max-width: 1440px) {
-        --container-size: 1200px;
-    }
-} */
+}

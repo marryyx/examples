@@ -1,22 +1,15 @@
 .cards {
     display: flex;
-    flex-direction: row;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
 
-    min-width: 100%;
-
-    padding: 0 24px;
-
-    @media (max-width: 1400px) {
-        flex-direction: column;
-        align-items: center;
-    }
+    padding: 24px;
 }
 
 .card {
     position: relative;
+    flex: var(--card-flex, 0 0 calc(33.333% - 16px));
 
-    width: 100%;
     padding: 24px;
 
     border-radius: 20px;
@@ -26,7 +19,7 @@
 
     &::before {
         position: absolute;
-        inset: 2;
+        inset: -1px;
 
         min-width: 100%;
         min-height: 100%;
@@ -40,7 +33,7 @@
 
     &::after {
         position: absolute;
-        inset: 1;
+        inset: -1px;
 
         min-width: 100%;
         min-height: 100%;
@@ -49,6 +42,7 @@
 
         background-image: url(../../assets/1-card.png);
         background-position: center;
+        background-size: cover;
     }
 
     &.--2 {
@@ -58,16 +52,39 @@
             background-image: url(../../assets/2-card.png);
         }
     }
-    
+
     &.--3 {
         --card-bg: #0E8BFF;
 
+        & .card__circle {
+            position: absolute;
+            top: -50%;
+            left: 60%;
+
+            width: 300px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.17);
+
+            &::before {
+                position: absolute;
+                top: 0;
+                right: 40%;
+
+                width: 300px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+
+                content: '';
+
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+
         &::after {
             z-index: 1;
-            background-image: url(../../assets/3-card.png);
-            background-position: top right;
-            background-size: 320px 180px;
-            background-repeat: no-repeat;
+            background-image: none;
         }
     }
 
@@ -83,16 +100,55 @@
         }
     }
 
-    @media (max-width: 1400px) {
-        width: 40%;
+    &.--5 {
+        --card-bg: linear-gradient(90deg, #3EFCCE 0%, #3FE4FB 100%);
+
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/5-card.svg);
+        }
     }
 
-    @media (max-width: 1100px) {
-        width: 50%;
+    &.--6 {
+        --card-bg: linear-gradient(45deg, #2621A9 0%, #0CFFEF 100%);
+
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/6-card.svg);
+        }
+    }
+
+    &.--7 {
+        --card-bg: #1238FF;
+
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/7-card.svg);
+        }
+    }
+
+    &.--8 {
+        --card-bg: #FF560E;
+
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/8-card.svg);
+        }
+    }
+
+    &.--9 {
+        &::after {
+            z-index: 1;
+            background-image: url(../../assets/9-card.svg);
+        }
+    }
+
+    @media (max-width: 1230px) {
+        --card-flex: 0 0 calc(50% - 24px);
     }
 
     @media (max-width: 920px) {
-        width: 64%;
+        width: max-content;
     }
 }
 
@@ -101,17 +157,29 @@
     align-items: center;
     justify-content: space-between;
 
+    flex-direction: var(--card-top-flex-direction, row);
+
     margin-bottom: 20%;
 
-    & svg {
+    & .card__svg {
         z-index: 3;
-        width: 32px;
-        aspect-ratio: 1;
-    }
 
-    & svg:last-of-type {
         width: 52px;
-        height: 24px;
+        height: 32px;
+
+        &.--bank-360 {
+            width: 30%;
+        }
+
+        &.--chip {
+            width: 48px;
+            height: 48px;
+        }
+
+        &.--small {
+            width: 40px;
+            height: 40px;
+        }
     }
 }
 
@@ -133,6 +201,11 @@
 .card__personal-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    &.--design-2 {
+        display: flex;
+        justify-content: space-between;
+    };
 }
 
 .card__data {
@@ -152,8 +225,8 @@
 .card__chip {
     position: absolute;
     z-index: 3;
-    bottom: 12px;
-    right: 24px;
+
+    inset: var(--card-inset-chip, auto 24px 12px auto);
 
     & svg {
         width: 48px;
