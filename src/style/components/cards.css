@@ -189,7 +189,7 @@
 
     color: white;
 
-    & .card__title {
+    & .card__number {
         margin-bottom: 24px;
 
         font-size: 28px;
@@ -228,7 +228,6 @@
 
     inset: var(--card-inset-chip, auto 24px 12px auto);
 
-    & svg {
-        width: 48px;
-    }
+    width: 50px;
+    height: 50px;
 }
