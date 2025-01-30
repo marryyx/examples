@@ -8,7 +8,7 @@
             "root": "src/html/includes"
         },
         "posthtml-expressions": {
-
+            "locals": {}
         }
     }
 }
