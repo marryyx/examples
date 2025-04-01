@@ -11,11 +11,11 @@
     },
     "devDependencies": {
         "@parcel/transformer-posthtml": "^2.13.3",
-        "autoprefixer": "^10.4.20",
+        "autoprefixer": "^10.4.21",
         "cssnano": "^7.0.6",
-        "parcel": "^2.13.3",
+        "parcel": "^2.14.4",
         "parcel-resolver-ignore": "^2.2.0",
-        "postcss": "^8.4.49",
+        "postcss": "^8.5.3",
         "posthtml-expressions": "^1.11.4",
         "posthtml-include": "^2.0.1",
         "posthtml-modules": "^0.9.1"
