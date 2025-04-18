@@ -19,5 +19,12 @@ body {
   width: 100vw;
   height: 100vh;
 
-  background: white;
+  background: rgb(150, 150, 150);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
