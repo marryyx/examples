@@ -9,15 +9,22 @@
 
     <div class="tabs">
       <div class="tabs__steps">
-        <button class="tabs__steps-button --active">Content 1</button>
-        <button class="tabs__steps-button">Content 2</button>
-        <button class="tabs__steps-button">Content 3</button>
-        <button class="tabs__steps-button">Content 4</button>
+        <button class="tabs__steps-button --active" data-tab-step="1">Content 1</button>
+        <button class="tabs__steps-button" data-tab-step="2">Content 2</button>
+        <button class="tabs__steps-button" data-tab-step="3">Content 3</button>
+        <button class="tabs__steps-button" data-tab-step="4">Content 4</button>
       </div>
 
-      <div class="tabs__content"></div>
+      <div class="tabs__content">
+        <article class="tabs__content-card" data-tab-content="1"></article>
+        <article class="tabs__content-card" data-tab-content="2"></article>
+        <article class="tabs__content-card" data-tab-content="3"></article>
+        <article class="tabs__content-card" data-tab-content="4"></article>
+      </div>
     </div>
   </div>
+
+  <include src="core/scripts.html"></include>
 
 </body>
 
