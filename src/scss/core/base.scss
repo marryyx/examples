@@ -21,6 +21,36 @@ body {
   height: 100vh;
 
   background: rgb(150, 150, 150);
+
+  @font-face {
+    font-family: 'SFProDisplay';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: font-local("SFProDisplay", "SFProDisplayLight"),
+         url("/src/assets/fonts/sf-pro/SFProDisplayLight.woff2") format("woff2"),
+         url("/src/assets/fonts/sf-pro/SFProDisplayLight.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: 'SFProDisplay';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: font-local("SFProDisplay", "SFProDisplayRegular"),
+         url("/src/assets/fonts/sf-pro/SFProDisplayRegular.woff2") format("woff2"),
+         url("/src/assets/fonts/sf-pro/SFProDisplayRegular.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: 'Aeonik';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: font-local("SFProDisplay", "SFProDisplayBold"),
+         url("/src/assets/fonts/sf-pro/SFProDisplayBold.woff2") format("woff2"),
+         url("/src/assets/fonts/sf-pro/SFProDisplayBold.woff") format("woff");
+  }
 }
 
 .container {
