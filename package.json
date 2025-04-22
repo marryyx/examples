@@ -9,6 +9,9 @@
         "start": "parcel src/html/pages/*.html",
         "build": "parcel build src/html/pages/*.html"
     },
+    "alias": {
+        "st-core": "./src/scss/core/_core.scss"
+    },
     "devDependencies": {
         "@parcel/transformer-posthtml": "^2.13.3",
         "@parcel/transformer-sass": "^2.14.4",

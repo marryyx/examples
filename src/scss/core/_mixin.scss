@@ -1,0 +1,41 @@
+@mixin font-face($font-name,
+    $local-name,
+    $font-path,
+    $font-file,
+    $font-weight: 400,
+    $font-style: normal,
+    $support-required: 'modern'
+
+) {
+    @font-face {
+        font-family: $font-name;
+        font-style: $font-style;
+        font-weight: $font-weight;
+        font-display: swap;
+
+        @if $support-required =='oldie' {
+            src: url('#{$font-path}.eot');
+            src: url('#{$font-path}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}.woff2') format('woff2'),
+            url('#{$font-path}.woff') format('woff'),
+            url('#{$font-path}.ttf') format('truetype');
+        }
+
+        @else if $support-required =='recent' {
+            src: url('#{$font-path}.woff2') format('woff2'),
+            url('#{$font-path}.woff') format('woff'),
+            url('#{$font-path}.ttf') format('truetype');
+        }
+
+        @else if $support-required =='modern' {
+            src: local('#{$local-name}'),
+            local('#{$font-file}'),
+            url('#{$font-path}#{$font-file}.woff2') format('woff2'),
+            url('#{$font-path}#{$font-file}.woff') format('woff');
+        }
+
+        @else {
+            @error 'Invalid support-required value. Must be "oldie", "recent" or "modern".';
+        }
+    }
+}
