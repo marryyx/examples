@@ -3,5 +3,9 @@
 @use "core/base";
 @use "core/fonts";
 
+/* ui */
+@use "ui/button";
+
 /* COMPONENT */
 @use "components/tabs";
+@use "components/slider-card";

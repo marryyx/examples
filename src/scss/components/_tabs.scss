@@ -10,17 +10,20 @@
     width: 100%;
     // outline: 1px solid red;
 
+    border-radius: 24px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .4);
+
     &__steps {
         position: absolute;
         z-index: 2;
-        top: -24px;
+        top: -20px;
 
         display: flex;
         gap: 12px;
 
-        padding: 6px 14px;
+        padding: 12px 14px;
 
-        border-radius: 24px;
+        border-radius: 48px;
         box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.3);
         background: white;
 
@@ -34,6 +37,8 @@
             background: var(--tabs-buttons-bg, transparent);
 
             cursor: pointer;
+
+            transition: all 0.3s linear;
 
             &.--active {
                 --tabs-buttons-bg: black;
@@ -63,161 +68,7 @@
 
             transform: translate(var(--tabs-contetn-card-transform-x, 0), 0);
             transition: transform 0.6s ease;
-
             background: rgb(0, 0, 0);
-        }
-
-        &-card {
-            position: relative;
-            display: flex;
-            flex: 100%;
-
-            width: 100%;
-            height: 100%;
-
-            padding: 24px 32px;
-
-            background: var(--tabs-content-tab-bg, rgb(255, 255, 255));
-
-            &.--2 {
-                flex-direction: column;
-                justify-content: center;
-                gap: 24px;
-
-                &::before {
-                    position: absolute;
-                    inset: 50% 0 auto auto;
-
-                    width: 100%;
-                    height: 100%;
-
-                    content: '';
-                    
-                    transform: translate(0, -50%);
-
-                    background-image: url('../assets/image/phone/image-card.svg');
-                    background-repeat: no-repeat;
-                    background-size: cover;
-
-                    @media (min-width: 1250px) {
-                        width: 70%;
-                        background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%), url('../assets/image/phone/image-card.svg');
-                    }
-                }
-            }
-
-            &.--3 {
-                --tabs-content-tab-bg: yellow;
-            }
-
-            &.--4 {
-                --tabs-content-tab-bg: blue;
-            }
-
-            &-media {
-                position: relative;
-                flex: 80%;
-
-                background: var(--tabs-content-media-bg, transparent);
-
-                @media (max-width: 1300px) {
-                    flex: 90%;
-                }
-
-                &::before {
-                    position: absolute;
-                    inset: auto auto 0 0;
-
-                    width: 300px;
-                    height: 100%;
-
-                    opacity: 0.35;
-
-                    content: '';
-
-                    filter: blur(100px);
-                    border-radius: 0 50% 50% 0;
-                    background: #B8FF00;
-                }
-
-                &-image {
-                    position: absolute;
-                    inset: var(--tabs-media-img-inset, 0);
-
-                    &.--phone {
-                        --tabs-media-img-inset: auto auto -72px auto;
-                        transform: translate(30%, 0);
-                    }
-
-                    &.--block-1 {
-                        --tabs-media-img-inset: auto auto 70% clamp(0px, 50vw, 400px);
-                        transform: translate(0, 50%);
-                    }
-
-                    &.--block-2 {
-                        --tabs-media-img-inset: auto auto 50% 0;
-                        transform: translate(0, 50%);
-                    }
-                }
-
-                @media (max-width: 1250px) {
-                    flex: 100%;
-                    filter: blur(1px);
-
-                    &::after {
-                        position: absolute;
-                        inset: -24px;
-
-                        margin: -24px;
-
-                        content: '';
-                        background: rgba(255, 255, 255, .7);
-                    }
-                }
-            }
-
-            &-details {
-                position: var(--tabs-content-details-position, relative);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 24px;
-
-                @media (max-width: 1250px) {
-                    --tabs-content-details-position: absolute;
-
-                    top: 50%;
-                    right: 0;
-
-                    max-width: 400px;
-                }
-            }
-
-            &-title {
-                position: relative;
-                z-index: 5;
-                display: var(--tabs-details-title-display, block);
-            }
-            
-            &-button {
-                position: relative;
-                z-index: 5;
-                display: var(--tabs-details-button-display, inline-flex);
-            }
-
-            &-subtitle {
-                position: relative;
-                z-index: 5;
-
-                color: var(--tabs-details-subtitle-color, rgb(0, 0, 0));
-            }
-
-            @media (max-width: 1250px) {
-                --tabs-details-button-display: none;
-                --tabs-details-title-display: none;
-                --p-font-size: 24px;
-                --tabs-details-subtitle-color: #0C1C01;
-            }
         }
     }
 }

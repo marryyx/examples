@@ -1,0 +1,17 @@
+.button {
+    display: var(--button-display, inline-flex);
+    align-items: center;
+    justify-content: center;
+  
+    width: max-content;
+  
+    padding: 12px 24px;
+  
+    text-align: center;
+    color: white;
+  
+    border-radius: 24px;
+    background: black;
+  
+    cursor: pointer;
+  }

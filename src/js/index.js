@@ -1,7 +1,7 @@
-import { Tabs } from './components/tabs.component'
+import { TabsComponent } from './components/tabs.component'
 
 document.addEventListener("DOMContentLoaded", () => {
-    const tabs = new Tabs();
+    const tabs = new TabsComponent();
 
     tabs.init()
   
