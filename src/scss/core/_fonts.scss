@@ -1,5 +1,15 @@
 @use "st-core" as *;
   
+// SF Pro
 @include font-face($font-family, "SFProDisplay", $font-path + '/sf-pro/', 'SFProDisplayLight', 100, normal, "modern");
 @include font-face($font-family, "SFProDisplay", $font-path + '/sf-pro/', 'SFProDisplayRegular', 400, normal, "modern");
 @include font-face($font-family, "SFProDisplay", $font-path + '/sf-pro/', 'SFProDisplayBold', 700, normal, "modern");
+
+// SF Pro Roundedn
+@include font-face($font-family-primary, "SF Pro Rounded Light", $font-path + '/sf-pro-rounded/', 'SFProRoundedLight', 100, normal, "modern");
+@include font-face($font-family-primary, "SF Pro Rounded Regular", $font-path + '/sf-pro-rounded/', 'SFProRoundedRegular', 400, normal, "modern");
+@include font-face($font-family-primary, "SF Pro Rounded Bold", $font-path + '/sf-pro-rounded/', 'SFProRoundedBold', 700, normal, "modern");
+
+// movement-indirect
+@include font-face($font-family-secondary, "Movement Indirect Black", $font-path + '/movement-indirect/', 'Movement-IndirectBlack', 700, normal, "modern");
+@include font-face($font-family-secondary, "Movement Indirect Thin", $font-path + '/movement-indirect/', 'Movement-IndirectThin', 400, normal, "modern");
