@@ -5,43 +5,42 @@
 
   padding: 24px 32px;
 
+  overflow: hidden;
+
   background: var(--tabs-content-tab-bg, rgb(255, 255, 255));
+
+  &::before, &::after {
+    position: absolute;
+    inset: var(--slider-card-before-inset, auto auto 16% 0);
+
+    width: var(--slider-card-before-width, 300px);
+    aspect-ratio: 1;
+
+    opacity: 0.35;
+
+    content: var(--slider-card-before-content, '');
+
+    filter: blur(var(--slider-card-before-blur, 100px));
+    border-radius: var(--slider-card-before-border-r, 0 50% 50% 0);
+    background: #B8FF00;
+  }
+
+  &::after {
+    inset: var(--slider-card-after-inset, auto 30% 8% auto);
+    width: var(--slider-card-after-width, 52px);
+    content: var(--slider-card-after-content, none);
+    background: #F59C23;
+  }
 
   &__media {
     position: var(--slider-card-position-media, relative);
+    inset: 0;
     width: 100%;
     background: var(--tabs-content-media-bg, transparent);
 
-    &::before {
-      position: absolute;
-      inset: auto auto 0 0;
-
-      width: 300px;
-      height: 100%;
-
-      opacity: 0.35;
-
-      content: var(--slider-card-before-content, '');
-
-      filter: blur(100px);
-      border-radius: 0 50% 50% 0;
-      background: #B8FF00;
-    }
-
     @media (max-width: 1250px) {
-      --slider-card-position-media: absolute;
-      inset: 0;
       filter: blur(1px);
-
-      &::after {
-        position: absolute;
-        inset: -24px;
-
-        margin: -24px;
-
-        content: '';
-        background: rgba(255, 255, 255, .7);
-      }
+      filter: opacity(50%);
     }
   }
 
@@ -51,6 +50,7 @@
 
     &.--phone {
       --tabs-media-img-inset: auto auto -20% auto;
+      min-width: 524px;
       max-width: 524px;
       transform: translate(32%, 0);
     }
@@ -65,13 +65,43 @@
       transform: translateY(50%);
     }
 
-    &.--half {
-      --tabs-media-img-inset: -32% auto auto auto;
+    &.--masked {
+      inset: 0;
 
       @media (min-width: 1250px) {
-        --tabs-media-img-inset: -32px;
+        inset: 0 0 0 20%;
         mask-image: linear-gradient(to left, white 0%, transparent 90%);
       }
+    }
+
+    &.--bubble {
+      max-width: var(--slider-card-media-pic-bubble-width, 400px);
+
+      & img {
+        border-radius: 50%;
+      }
+    }
+
+    &.--bottom-left,
+    &.--top-left,
+    &.--center {
+      display: var(--slider-card-media-pic-display, block);
+    }
+
+    &.--top-left {
+      inset: auto auto 38% 0;
+      z-index: 1;
+    }
+
+    &.--center {
+      inset: 7% auto auto 24%;
+      z-index: 3;
+    }
+
+    &.--bottom-left {
+      --slider-card-media-pic-bubble-width: 334px;
+      inset: 55% auto auto 0;
+      z-index: 2;
     }
   }
 
@@ -82,12 +112,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: var(--slider-card-details-flex, 60%);
     gap: 24px;
 
     max-width: var(--slide-card-details-max-width, 540px);
-
-    order: var(--slide-card-details-order, 1);
 
     @media (max-width: 1250px) {
       align-items: center;
@@ -123,15 +150,45 @@
 }
 
 .slider-card.--2 {
+  --slider-card-position-media: absolute;
   --slider-card-before-content: none;
-  --slide-card-details-order: -1;
-  background-color: rgb(255, 255, 255);
+  --slide-card-details-max-width: 823px;
+  --tabs-content-tab-bg: rgb(255, 255, 255);
 }
 
 .slider-card.--3 {
-  --tabs-content-tab-bg: yellow;
+  --slider-card-after-content: '';
+  --slider-card-before-blur: 24px;
+  --slider-card-before-inset: 8% 10% auto auto;
+  --slider-card-before-width: 52px;
+  --slider-card-before-border-r: 50%;
+
+  --tabs-content-tab-bg: rgb(255, 255, 255);
+
+  @media (max-width: 1250px) {
+    --slider-card-position-media: absolute;
+    --slider-card-before-content: none;
+    --slider-card-media-pic-display: none;
+
+    &::after {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      content: '';
+
+      filter: blur(1px);
+      filter: opacity(50%);
+
+      border-radius: 0;
+      background: url('../assets/image/card-3/3@3x.webp') no-repeat center 20% / cover;
+    }
+  }
 }
 
 .slider-card.--4 {
-  --tabs-content-tab-bg: blue;
+  // --slider-card-before-content: none;
+  --tabs-content-tab-bg: rgb(255, 255, 255);
 }
