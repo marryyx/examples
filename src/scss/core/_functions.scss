@@ -1,0 +1,33 @@
+@use "sass:math";
+
+$baseFontSize: 14;
+
+@function dv($numb1, $numb2) {
+  @return math.div($numb1, $numb2);
+}
+
+// px to rem
+@function toRem($pixels, $context: $baseFontSize) {
+  @if math.is-unitless($pixels) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if math.is-unitless($context) {
+    $context: $context * 1px;
+  }
+
+  @return dv($pixels, $context) * 1rem;
+}
+
+// px to em
+@function toEm($pixels, $context: $baseFontSize) {
+  @if math.is-unitless($pixels) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if math.is-unitless($context) {
+    $context: $context * 1px;
+  }
+
+  @return dv($pixels, $context) * 1em;
+}

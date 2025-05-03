@@ -1,3 +1,5 @@
+@use "st-core" as *;
+
 .button {
     display: var(--button-display, inline-flex);
     align-items: center;
@@ -5,12 +7,12 @@
   
     width: max-content;
   
-    padding: 12px 24px;
+    padding: toRem(12) toRem(24);
   
     text-align: center;
     color: white;
   
-    border-radius: 24px;
+    border-radius: toRem(24);
     background: black;
   
     cursor: pointer;
