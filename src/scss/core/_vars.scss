@@ -1,12 +1,12 @@
 @use "functions" as *;
 
-$contentScale: (
-  (direction: 'min-width', wide: 2100px, scale: 138%),
-  (direction: 'max-width', wide: 1200px, scale: 98%),
-  (direction: 'max-width', wide: 480px, scale: 78%),
-  (direction: 'max-width', wide: 340px, scale: 60%),
-  (direction: 'max-width', wide: 300px, scale: 55%)
-)!default;
+// $contentScale: (
+//   (direction: 'min-width', wide: 1920px, scale: 130%),
+//   (direction: 'max-width', wide: 1392px, scale: 98%),
+//   (direction: 'max-width', wide: 600px, scale: 10%),
+//   (direction: 'max-width', wide: 340px, scale: 60%),
+//   (direction: 'max-width', wide: 300px, scale: 55%)
+// )!default;
 
 $font-family: 'SF Pro' !default;
 $font-family-primary: 'SF Pro Rounded' !default;
