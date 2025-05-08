@@ -160,7 +160,12 @@
 
   &__details-top {
     width: toRem(64);
-    height: toRem(64);
+    aspect-ratio: 1;
+
+    @media (max-width: 650px) {
+      width: toRem(38);
+      height: toRem(38);
+    }
   }
 
   &__details-title {

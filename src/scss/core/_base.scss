@@ -72,6 +72,10 @@ h1 {
   @media (max-width: 600px) {
     font-size: toRem(32);
   }
+
+  @media (max-width: 416px) {
+    font-size: toRem(26);
+  }
 }
 
 h2 {

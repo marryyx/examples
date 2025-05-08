@@ -24,6 +24,8 @@
         box-shadow: 0 0 toRem(18) 0 rgba(0, 0, 0, 0.3);
         background: white;
 
+        overflow: hidden;
+
         &-button {
             padding: toRem(6) toRem(16);
 
