@@ -2,11 +2,15 @@
 
 .slider-card {
   position: relative;
-  display: flex;
+  display: var(--slider-card-display, none);
 
   padding: toRem(24) toRem(32);
 
   overflow: hidden;
+
+  &.--is-active {
+    --slider-card-display: flex;
+  }
 
   &::before,
   &::after {
