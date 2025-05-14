@@ -16,10 +16,21 @@ export class TabsComponent {
     slideCard(datasetStep) {
         this.card.forEach(item => item.classList.remove('--is-active'));
 
+        const cardsAnim = [
+            { opacity: "0" },
+            { opacity: "1" },
+        ];
+
+        const cardsTiming = {
+            duration: 950,
+            iterations: 0.95,
+        };
+
         this.card.forEach(elm => {
             const dataset = elm.dataset.card;
 
             if (datasetStep == dataset) {
+                elm.animate(cardsAnim, cardsTiming);
                 elm.classList.add('--is-active');
             }
         });
