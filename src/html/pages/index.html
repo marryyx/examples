@@ -6,24 +6,12 @@
 <body>
 
   <div class="container">
-
-    <div class="tabs">
-
-      <div class="tabs__steps">
-        <button class="tabs__steps-button --active" data-step="get-paid">Get paid</button>
-        <button class="tabs__steps-button" data-step="borrow">Borrow</button>
-        <button class="tabs__steps-button" data-step="invest">Invest</button>
-        <button class="tabs__steps-button" data-step="transact">Transact</button>
+    <div class="loaders">
+      <div class="loaders__card">
+        <div class="loaders__card-loader"></div>
       </div>
-
-      <div class="tabs__content">
-        <div class="tabs__content-inner">
-          <include src="components/slider-cards/slider-card-get-paid.html"></include>
-          <include src="components/slider-cards/slider-card-borrow.html"></include>
-          <include src="components/slider-cards/slider-card-invest.html"></include>
-          <include src="components/slider-cards/slider-card-trancast.html"></include>
-        </div>
-      </div>
+      <div class="loaders__card"></div>
+      <div class="loaders__card"></div>
     </div>
   </div>
 
