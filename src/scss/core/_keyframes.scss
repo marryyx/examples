@@ -1,0 +1,69 @@
+@use "functions" as *;
+
+@keyframes spinBefore {
+    0% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+}
+
+@keyframes spinAfter {
+    0% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+///////////////////////////////////////////////////////////
+
+@keyframes loaderDots {
+    0% {
+        transform: translatex(0);
+    }
+
+    100% {
+        transform: translateX(-24px);
+    }
+}
+
+@keyframes loaderDot {
+    0% {
+        left: 100px;
+        top: 0
+    }
+
+    80% {
+        left: 0;
+        top: 0;
+    }
+
+    85% {
+        left: 0;
+        top: -20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    90% {
+        width: 40px;
+        height: 15px;
+    }
+
+    95% {
+        left: 100px;
+        top: -20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    100% {
+        left: 100px;
+        top: 0;
+    }
+}

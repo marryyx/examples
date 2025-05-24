@@ -28,52 +28,90 @@
         width: 100%;
         height: 100%;
 
-        &::before,
-        &::after {
-            position: absolute;
-            inset: 50% auto auto 50%;
+        &.--circle {
 
-            aspect-ratio: 1;
+            &::before,
+            &::after {
+                position: absolute;
+                inset: 50% auto auto 50%;
 
-            content: '';
+                aspect-ratio: 1;
 
-            border-radius: 50%;
-            background: transparent;
+                content: '';
 
-            clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+                border-radius: 50%;
+                background: transparent;
+
+                clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+            }
+
+            &::before {
+                width: toRem(130);
+
+                border: 6px solid rgb(156, 156, 156);
+                border-left: none;
+                border-bottom: none;
+                transform: translate(-50%, -50%) rotate(var(--loader-first-before-transform-rotate, -180deg));
+
+                animation: spinBefore .8s ease-in-out infinite;
+            }
+
+            &::after {
+                width: toRem(160);
+
+                border: 6px solid rgb(255, 255, 255);
+                border-left: none;
+                border-bottom: none;
+
+                transform: translate(-50%, -50%) rotate(var(--loader-first-after-transform-rotate, 0deg));
+
+                animation: spinAfter .8s ease-in-out infinite;
+            }
         }
 
-        &::before {
-            width: toRem(130);
+        &.--dots {
+            position: relative;
 
-            border: 6px solid rgb(156, 156, 156);
-            border-left: none;
-            border-bottom: none;
-            transform: translate(-50%, -50%) rotate(var(--loader-first-before-transform-rotate, -180deg));
+            .loaders__card-loader-dots {
+                position: absolute;
+                top: 50%;
+                left: 50%;
 
-            animation: spinBefore .8s ease-in-out infinite;
-        }
+                width: toRem(144);
+                height: toRem(24);
 
-        &::after {
-            width: toRem(160);
+                transform: translate(-50%, -50%);
+            }
 
-            border: 6px solid rgb(255, 255, 255);
-            border-left: none;
-            border-bottom: none;
+            .loaders__card-loader-dot {
+                position: absolute;
 
-            transform: translate(-50%, -50%) rotate(var(--loader-first-after-transform-rotate, 0deg));
+                width: 24px;
+                height: 24px;
 
-            animation: spinAfter .8s ease-in-out infinite;
+                border-radius: 50%;
+                background: white;
+            }
+
+            // .loaders__card-loader-dot:first-of-type {
+            //     animation: loaderDot 2s linear infinite;
+            // }
+
+            .loaders__card-loader-dot:nth-child(2) {
+                animation: loaderDot 2s linear infinite -.4s;
+            }
+
+            .loaders__card-loader-dot:nth-child(3) {
+                animation: loaderDot 2s linear infinite -.8s;
+            }
+
+            .loaders__card-loader-dot:nth-child(4) {
+                animation: loaderDot 2s linear infinite -1.3s;
+            }
+
+            // .loaders__card-loader-dot:last-of-type {
+            //     animation: loaderDot 2s linear infinite -1.6s;
+            // }
         }
     }
-}
-
-@keyframes spinBefore {
-    0% { transform: translate(-50%, -50%) rotate(180deg); }
-    100% { transform: translate(-50%, -50%) rotate(-180deg); }
-}
-
-@keyframes spinAfter {
-    0% { transform: translate(-50%, -50%) rotate(-360deg); }
-    100% { transform: translate(-50%, -50%) rotate(0deg); }
 }
