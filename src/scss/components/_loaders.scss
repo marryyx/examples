@@ -5,18 +5,20 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
     gap: toRem(40);
 
     height: 100%;
     width: 100%;
 
     &__card {
-        flex: 1 1 toRem(350);
-        // padding: toRem(42);
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        width: 100%;
+        flex: 1 1 toRem(350);
+
         height: toRem(350);
+        aspect-ratio: 1;
 
         border-radius: toRem(8);
         background: rgb(37, 27, 44);
@@ -25,47 +27,38 @@
     &__card-loader {
         position: relative;
 
-        width: 100%;
-        height: 100%;
+        width: toRem(160);
+        aspect-ratio: 1;
 
         &.--circle {
 
             &::before,
             &::after {
                 position: absolute;
-                inset: 50% auto auto 50%;
+                inset: 0;
 
                 aspect-ratio: 1;
 
                 content: '';
 
+                border: 6px solid rgb(156, 156, 156);
+                border-left: none;
+                border-bottom: none;
                 border-radius: 50%;
                 background: transparent;
 
                 clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+                animation: spinAnimated .8s ease-in-out infinite;
             }
 
             &::before {
-                width: toRem(130);
-
-                border: 6px solid rgb(156, 156, 156);
-                border-left: none;
-                border-bottom: none;
-                transform: translate(-50%, -50%) rotate(var(--loader-first-before-transform-rotate, -180deg));
-
-                animation: spinBefore .8s ease-in-out infinite;
+                scale: .75;
             }
 
             &::after {
-                width: toRem(160);
+                border-color: rgb(255, 255, 255);
 
-                border: 6px solid rgb(255, 255, 255);
-                border-left: none;
-                border-bottom: none;
-
-                transform: translate(-50%, -50%) rotate(var(--loader-first-after-transform-rotate, 0deg));
-
-                animation: spinAfter .8s ease-in-out infinite;
+                animation-direction: reverse;
             }
         }
 
@@ -93,9 +86,9 @@
                 background: white;
             }
 
-            // .loaders__card-loader-dot:first-of-type {
-            //     animation: loaderDot 2s linear infinite;
-            // }
+            .loaders__card-loader-dot:first-of-type {
+                animation: loaderDot 2s linear infinite;
+            }
 
             .loaders__card-loader-dot:nth-child(2) {
                 animation: loaderDot 2s linear infinite -.4s;
@@ -106,12 +99,12 @@
             }
 
             .loaders__card-loader-dot:nth-child(4) {
-                animation: loaderDot 2s linear infinite -1.3s;
+                animation: loaderDot 2s linear infinite -1.2s;
             }
 
-            // .loaders__card-loader-dot:last-of-type {
-            //     animation: loaderDot 2s linear infinite -1.6s;
-            // }
+            .loaders__card-loader-dot:last-of-type {
+                animation: loaderDot 2s linear infinite -1.6s;
+            }
         }
     }
 }
