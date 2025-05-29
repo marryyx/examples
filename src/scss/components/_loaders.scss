@@ -108,3 +108,65 @@
         }
     }
 }
+
+.loader-advanced {
+    position: relative;
+
+    width: toRem(80);
+    height: toRem(280);
+
+    border-radius: toRem(10);
+    border: toRem(6) solid white;
+    background: rgba(255, 255, 255, 0.05);
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 50%;
+    }
+
+    &::before {
+        left: 0;
+        z-index: 9;
+
+        width: toRem(80);
+        height: toRem(120);
+        margin: 0 toRem(-6);
+
+        content: '';
+
+        background: rgb(37, 27, 44);
+
+        transform: translateY(-50%);
+    }
+
+    &::after {
+        left: 50%;
+        z-index: 10;
+
+        width: toRem(100);
+        height: toRem(120);
+
+        content: "";
+
+        border-radius: toRem(10);
+        border: toRem(5) solid white;
+        background: rgba(255, 255, 255, 0.05);
+
+        transform: translate(-50%, -50%);
+    }
+    
+    &__button {
+        position: absolute;
+        top: 50%;
+        right: -50%;
+
+        width: toRem(12);
+        height: toRem(50);
+
+        border-radius: toRem(6);
+        background: white;
+
+        transform: translateY(-50%);
+    }
+}
