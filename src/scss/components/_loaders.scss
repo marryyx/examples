@@ -112,31 +112,33 @@
 .loader-advanced {
     position: relative;
 
-    width: toRem(80);
-    height: toRem(280);
+    width: 80px;
+    height: 220px;
 
-    border-radius: toRem(10);
-    border: toRem(6) solid white;
+    border: 8px solid white;
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.05);
+
+    animation: shaking 1.1s infinite ease-in-out;
 
     &::before,
     &::after {
         position: absolute;
         top: 50%;
+
+        content: '';
     }
 
     &::before {
         left: 0;
         z-index: 9;
 
-        width: toRem(80);
-        height: toRem(120);
-        margin: 0 toRem(-6);
+        width: 100px;
+        height: 100px;
 
-        content: '';
+        margin: 0 -8px;
 
         background: rgb(37, 27, 44);
-
         transform: translateY(-50%);
     }
 
@@ -144,25 +146,23 @@
         left: 50%;
         z-index: 10;
 
-        width: toRem(100);
-        height: toRem(120);
+        width: 120px;
+        height: 100px;
 
-        content: "";
-
-        border-radius: toRem(10);
-        border: toRem(5) solid white;
+        border: 8px solid white;
+        border-radius: 10px;
         background: rgba(255, 255, 255, 0.05);
 
         transform: translate(-50%, -50%);
     }
-    
+
     &__button {
         position: absolute;
         top: 50%;
-        right: -50%;
+        right: -70%;
 
         width: toRem(12);
-        height: toRem(50);
+        height: toRem(38);
 
         border-radius: toRem(6);
         background: white;
