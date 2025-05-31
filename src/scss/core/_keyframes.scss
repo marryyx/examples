@@ -61,23 +61,68 @@
 ///////////////////////////////////////////////////////
 
 @keyframes shaking {
+  0%, 10%, 25%, 35%, 50%, 60%, 75%, 85%, 100% {
+    transform: translateY(0);
+  }
+  5%, 30%, 55%, 80% {
+    transform: translateY(-20px);
+  }
+  7%, 32%, 57%, 82% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes all-devices {
+  0% {
+    --loader-advanced-width: 100px;
+    --loader-advanced-height: 100px;
+  }
+  25% {
+    --loader-advanced-width: 320px;
+    --loader-advanced-height: 220px;
+  }
+  50% {
+    --loader-advanced-width: 320px;
+    --loader-advanced-height: 220px;
+  }
+  75% {
+    --loader-advanced-width: 130px;
+    --loader-advanced-height: 220px;
+  }
+  100% {
+    --loader-advanced-width: 100px;
+    --loader-advanced-height: 100px;
+  }
+}
+
+.element {
+  animation: shaking 4s infinite ease, all-devices 4s infinite ease;
+}
+
+
+@keyframes all-devices {
     0% {
-        transform: translateY(0)
+        --loader-advanced-width: 100px;
+        --loader-advanced-height: 100px;
     }
 
-    38% {
-        transform: translateY(10px)
+    25% {
+        --loader-advanced-width: 320px;
+        --loader-advanced-height: 220px;
     }
 
-    55% {
-        transform: translateY(-20px)
+    50% {
+        --loader-advanced-width: 320px;
+        --loader-advanced-height: 220px;
     }
 
-    78% {
-        transform: translateY(20px)
+    75% {
+        --loader-advanced-width: 130px;
+        --loader-advanced-height: 220px;
     }
 
     100% {
-        transform: translateY(0)
+        --loader-advanced-width: 100px;
+        --loader-advanced-height: 100px;
     }
 }
